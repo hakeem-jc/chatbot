@@ -13,8 +13,10 @@ const App = () => {
 
       <section className="app__container">
         <div className="app__text">
-          <ChatBox />
-          <ChatBox />
+          <ChatBox type={'bot'}/>
+          <ChatBox type={'user'} />
+          <ChatBox type={'bot'}/>
+
         </div>
 
 

@@ -1,9 +1,12 @@
 .chatbox {
     width: 100%;
     display: flex;
-    background-color: #444654;
     align-items: center;
-    padding: 5px;
+    padding: 1.2em 1em;
+}
+
+.chatbox--bot {
+    background-color: #444654;
 }
 
 .chatbox__image {
