@@ -6,6 +6,13 @@ import { ChatType } from './interfaces/interfaces';
 
 const App = () => {
 
+  const conversation = [{type:ChatType.BOT, text:"Lorem Ipsum, Puta Madre"},
+                        {type:ChatType.USER, text:"Lorem Ipsum, Puta Madre"},
+                        {type:ChatType.BOT, text:"Lorem Ipsum, Puta Madre"},
+                        {type:ChatType.USER, text:"Lorem Ipsum, Puta Madre"},
+                        {type:ChatType.BOT, text:"Lorem Ipsum, Puta Madre"},
+                      ];
+
   return (
     <main className="app">
       <header className="app__header">
@@ -14,11 +21,10 @@ const App = () => {
 
       <section className="app__container">
         <div className="app__text">
-          <ChatBox type={ChatType.BOT}/>
-          <ChatBox type={ChatType.USER} />
-          <ChatBox type={ChatType.BOT}/>
+          {conversation.map((message, i)=> {
+            return <ChatBox type={message.type} text={message.text}/>
+          })}
         </div>
-
 
         <footer className='app__footer' >
           <TextField />

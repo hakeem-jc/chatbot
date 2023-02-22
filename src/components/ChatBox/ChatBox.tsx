@@ -5,7 +5,8 @@ import avatar from '../../assets/bot.png';
 import { ChatType } from '../../interfaces/interfaces';
 
 interface ChatBoxProps {
-    type: string
+    type: string,
+    text: string
 }
  
 const ChatBox:FC<ChatBoxProps> = (props) => {
@@ -17,7 +18,7 @@ const ChatBox:FC<ChatBoxProps> = (props) => {
                 className='chatbox__image' alt='User Icon'
             />
 
-            <p className='chatbox__text'>Lorem ipsum puta madre</p>
+            <p className='chatbox__text'>{props.text}</p>
         </div>
         
     </div>)
