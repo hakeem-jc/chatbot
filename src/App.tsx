@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import ChatBox from './components/ChatBox/ChatBox';
 import TextField from './components/TextField/TextField';
+import { ChatType } from './interfaces/interfaces';
 
 const App = () => {
 
@@ -13,10 +14,9 @@ const App = () => {
 
       <section className="app__container">
         <div className="app__text">
-          <ChatBox type={'bot'}/>
-          <ChatBox type={'user'} />
-          <ChatBox type={'bot'}/>
-
+          <ChatBox type={ChatType.BOT}/>
+          <ChatBox type={ChatType.USER} />
+          <ChatBox type={ChatType.BOT}/>
         </div>
 
 
