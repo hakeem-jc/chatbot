@@ -30,3 +30,14 @@
         margin-left: 25px;
     }
 }
+
+@media only screen and (min-width: 1280px) {
+    .textfield {
+        font-size: 1rem;
+    }
+
+    .textfield__icon {
+        font-size: 1.8rem;
+        margin-left: 25px;
+    }
+}

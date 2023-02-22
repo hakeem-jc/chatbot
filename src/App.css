@@ -23,3 +23,13 @@
     font-size: 1.4rem;
   }
 }
+
+@media only screen and (min-width: 1280px) {
+  .app__title {
+    font-size: 3rem;
+  }
+
+  .app__footer-text {
+    font-size: 1rem;
+  }
+}
