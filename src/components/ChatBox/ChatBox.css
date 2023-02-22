@@ -1,0 +1,15 @@
+.chatbox {
+    width: 100%;
+    display: flex;
+    background-color: #444654;
+    align-items: center;
+    padding: 5px;
+}
+
+.chatbox__image {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
