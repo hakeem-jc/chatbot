@@ -17,9 +17,12 @@ const App = () => {
           <ChatBox />
         </div>
 
-        <TextField />
 
+        <footer className='app__footer' >
+          <TextField />
 
+          <p className='app__footer-text'>© 2023 Hakeem Clarke</p>
+        </footer>
       </section>
     </main>
   )

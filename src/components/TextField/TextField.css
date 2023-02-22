@@ -1,0 +1,22 @@
+.textfield__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.textfield {
+    width: 70%;
+    background-color: #40414F;
+    border: none;
+    color: #ececf1;
+    font-size: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    outline: none;
+}
+
+.textfield__icon {
+    font-size: 24px;
+    margin-left: 10px;
+}
