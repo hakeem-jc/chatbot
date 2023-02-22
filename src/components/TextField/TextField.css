@@ -10,13 +10,23 @@
     background-color: #40414F;
     border: none;
     color: #ececf1;
-    font-size: 1em;
+    font-size: 1rem;
     padding: 1em;
     border-radius: 5px;
     outline: none;
 }
 
 .textfield__icon {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-left: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .textfield {
+        font-size: 1.8rem;
+    }
+    .textfield__icon {
+        font-size: 2.4rem;
+        margin-left: 25px;
+    }
 }

@@ -13,3 +13,13 @@
   color: #757575;
   font-size: 0.8rem;
 }
+
+@media only screen and (min-width: 768px) {
+  .app__title  {
+      font-size: 4rem;
+  }
+
+  .app__footer-text {
+    font-size: 1.4rem;
+  }
+}
