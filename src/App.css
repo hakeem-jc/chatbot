@@ -2,16 +2,31 @@
   text-align: center;
 }
 
+.app__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 92vh;
+}
+
+.app__text {
+  margin-bottom: 3rem;
+}
+
 .app__footer {
   width: 100%;
-  position: absolute;
-  bottom: 2px;
 }
 
 .app__footer-text {
   text-align: center;
   color: #757575;
   font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 400px) {
+  .app__container {
+   min-height: 68vh;
+  }
 }
 
 @media only screen and (min-width: 768px) {
