@@ -7,10 +7,6 @@ import { ChatType } from '../../interfaces/interfaces';
 import { useAppDispatch } from '../../redux/hooks';
 import { setChat } from '../../redux/chatSlice';
 
-interface TextFieldProps {
-    type: string
-}
-
 
 const TextField:FC = () => {
     const dispatch = useAppDispatch();
@@ -18,6 +14,7 @@ const TextField:FC = () => {
     let addMessage = (values:any) => {
         dispatch(setChat({type:ChatType.USER, text:values.message}));
     }
+    // TODO - Reset form after submit
     
     return (
         <Formik
