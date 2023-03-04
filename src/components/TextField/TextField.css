@@ -21,6 +21,11 @@
     margin-left: 12px;
 }
 
+.textfield__submit {
+    border: none;
+    background-color: transparent;
+}
+
 @media only screen and (min-width: 768px) {
     .textfield {
         font-size: 1.8rem;
