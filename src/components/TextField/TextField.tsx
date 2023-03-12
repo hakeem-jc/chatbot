@@ -35,9 +35,12 @@ const TextField:FC = () => {
     return (
         <Formik
             initialValues={{message:''}}
-            onSubmit={addMessage}
+            onSubmit={(values, {resetForm})=>{
+                addMessage(values);
+                resetForm()
+            }}
         >
-             {({ values, handleChange, handleBlur, handleSubmit }) => (
+             {({ values, handleChange, handleBlur, handleSubmit, resetForm }) => (
             <form className="textfield__form" onSubmit={handleSubmit} >
                 <input 
                     type="text" 
