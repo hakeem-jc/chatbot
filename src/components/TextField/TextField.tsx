@@ -31,11 +31,6 @@ const TextField:FC = () => {
         setTimeout(randomMessage,500);
     }
     
-    // TODO - Reset form after submit
-    // TODO - Get a white send icon
-    // TODO - Make footer sticky
-    // Move chat scroll but keep text box in place
-
     
     return (
         <Formik
