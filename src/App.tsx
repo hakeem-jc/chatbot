@@ -13,18 +13,16 @@ const App:FC = () => {
         <h1 className='app__title'>ChatBot</h1>
       </header>  
 
-      <section className="app__container">
-        <div className="app__text">
-          {chat.map((message, i)=> {
-            return <ChatBox type={message.type} text={message.text}/>
-          })}
-        </div>
+      <section className="app__messages">
+        {chat.map((message, i)=> {
+          return <ChatBox type={message.type} text={message.text}/>
+        })}
+      </section>
 
-        <footer className='app__footer' >
+      <footer className='app__footer' >
           <TextField />
           <p className='app__footer-text'>© 2023 Hakeem Clarke</p>
         </footer>
-      </section>
     </main>
   )
 }

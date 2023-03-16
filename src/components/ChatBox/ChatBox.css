@@ -1,6 +1,6 @@
 .chatbox {
     width: 100%;
-    padding: 1.2em 1em;
+    /* padding: 1.2em 1em; */
 }
 
 .chatbox__text-container {
@@ -16,8 +16,7 @@
     width: 45px;
     height: 45px;
     border-radius: 5px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin: 15px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -27,10 +26,6 @@
 }
 
 @media only screen and (min-width: 1280px) {
-    .chatbox {
-        width: 97.5%;
-    }
-
     .chatbox__text {
         font-size: 1rem;
     }
