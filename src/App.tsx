@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useRef, useEffect } from 'react';
 import './App.css';
 import ChatBox from './components/ChatBox/ChatBox';
 import TextField from './components/TextField/TextField';
@@ -6,6 +6,12 @@ import { useAppSelector } from './redux/hooks';
 
 const App:FC = () => {
   const { chat } = useAppSelector(state => state);
+  const anchor = useRef<HTMLSpanElement>(null);
+  useEffect(() => { 
+    if (anchor.current) {
+      anchor.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [chat]);
 
   return (
     <main className="app">
@@ -17,6 +23,7 @@ const App:FC = () => {
         {chat.map((message, i)=> {
           return <ChatBox type={message.type} text={message.text}/>
         })}
+        <span ref={anchor}></span>
       </section>
 
       <footer className='app__footer' >

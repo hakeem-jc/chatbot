@@ -23,7 +23,7 @@ const TextField:FC = () => {
 
     const randomMessage = () => {
         let option = Math.floor(Math.random() * bot_messages.length);
-        dispatch(setChat(bot_messages[option]))
+        dispatch(setChat(bot_messages[option]));
     }
 
     let addMessage = (values:any) => {
@@ -37,7 +37,7 @@ const TextField:FC = () => {
             initialValues={{message:''}}
             onSubmit={(values, {resetForm})=>{
                 addMessage(values);
-                resetForm()
+                resetForm();
             }}
         >
              {({ values, handleChange, handleBlur, handleSubmit, resetForm }) => (
