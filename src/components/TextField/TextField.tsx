@@ -50,6 +50,7 @@ const TextField:FC = () => {
                     value={values.message}
                     onChange={handleChange}
                     onBlur={handleBlur}
+                    autoComplete='off'
                 />
                 <button type="submit" className="textfield__submit">
                     <FontAwesomeIcon icon={faPaperPlane} className="textfield__icon"/>

@@ -16,7 +16,7 @@ const App:FC = () => {
   return (
     <main className="app">
       <header className="app__header">
-        <h1 className='app__title'>ChatBot</h1>
+        <h1 className='app__title'>BackChat</h1>
       </header>  
 
       <section className="app__messages">
