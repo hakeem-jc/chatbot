@@ -3,11 +3,6 @@ export enum ChatType {
     BOT = "assistant",
 }
 
-// export interface ChatInterface {
-//     type: ChatType;
-//     text: string;
-// }
-
 export interface Message {
     role: string;
     content: string;
