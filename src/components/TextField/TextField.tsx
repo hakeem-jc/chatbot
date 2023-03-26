@@ -3,35 +3,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { Formik } from "formik";
 import './TextField.css';
-import { ChatType } from '../../interfaces/interfaces';
-import { useAppDispatch } from '../../redux/hooks';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { setChat } from '../../redux/chatSlice';
-
+import axios from 'axios';
 
 const TextField:FC = () => {
     const dispatch = useAppDispatch();
-
-    const bot_messages = [
-        {type:ChatType.BOT, text:'I\'m Bender, baby! Oh god, please insert liquor!'},
-        {type:ChatType.BOT, text:'Hey, sexy mama. Wanna kill all humans?'},
-        {type:ChatType.BOT, text:'I hope he didn\'t die. Unless he left a note naming me his successor, then I hope he did die.'},
-        {type:ChatType.BOT, text:'I\'m so embarrassed. I wish everybody else was dead'},
-        {type:ChatType.BOT, text:'My story is a lot like yours, only more interesting \'cause it involves robots.'},
-        {type:ChatType.BOT, text:'This is the worst kind of discrimination there is: the kind against me!'},
-        {type:ChatType.BOT, text:'Anything less than immortality is a complete waste of time.'},
-    ];
-
-    const randomMessage = () => {
-        let option = Math.floor(Math.random() * bot_messages.length);
-        dispatch(setChat(bot_messages[option]));
-    }
+    const { chat } = useAppSelector(state => state);
 
     let addMessage = (values:any) => {
-        dispatch(setChat({type:ChatType.USER, text:values.message}));
-        setTimeout(randomMessage,500);
-    }
-    
-    
+        let payload = { messages: [...chat,{role:"user", content:values.message}] };
+        dispatch(setChat({role:"user", content:values.message}));
+
+        axios.post('http://localhost:3000/api/generate', payload)
+        .then((res)=>{
+            dispatch(setChat({role:"assistant", content:res.data.result}));
+            }).catch((err)=>{
+                console.error(err);
+            });
+        }
+
     return (
         <Formik
             initialValues={{message:''}}

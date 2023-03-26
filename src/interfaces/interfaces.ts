@@ -1,9 +1,14 @@
 export enum ChatType {
-    USER = "USER",
-    BOT = "BOT"
+    USER = "user",
+    BOT = "assistant",
 }
 
-export interface ChatInterface {
-    type: ChatType;
-    text: string;
+// export interface ChatInterface {
+//     type: ChatType;
+//     text: string;
+// }
+
+export interface Message {
+    role: string;
+    content: string;
 }

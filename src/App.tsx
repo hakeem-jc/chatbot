@@ -21,7 +21,7 @@ const App:FC = () => {
 
       <section className="app__messages">
         {chat.map((message, i)=> {
-          return <ChatBox type={message.type} text={message.text}/>
+          return message.role  !== "system" && <ChatBox key={`message:${i}`} role={message.role} content={message.content}/>
         })}
         <span ref={anchor}></span>
       </section>

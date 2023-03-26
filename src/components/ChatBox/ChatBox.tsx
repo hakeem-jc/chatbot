@@ -5,20 +5,20 @@ import avatar from '../../assets/bot.png';
 import { ChatType } from '../../interfaces/interfaces';
 
 interface ChatBoxProps {
-    type: string,
-    text: string
+    role: string,
+    content: string
 }
  
 const ChatBox:FC<ChatBoxProps> = (props) => {
 
     return (
-    <div className={props.type == ChatType.BOT ? 'chatbox chatbox--bot':'chatbox'}>
+    <div className={props.role == ChatType.BOT ? 'chatbox chatbox--bot':'chatbox'}>
         <div className='chatbox__text-container'>
-            <img src={props.type === ChatType.BOT ? avatar : user}
+            <img src={props.role === ChatType.BOT ? avatar : user}
                 className='chatbox__image' alt='User Icon'
             />
 
-            <p className='chatbox__text'>{props.text}</p>
+            <p className='chatbox__text'>{props.content}</p>
         </div>
         
     </div>)
