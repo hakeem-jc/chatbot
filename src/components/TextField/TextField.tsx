@@ -15,7 +15,7 @@ const TextField:FC = () => {
         let payload = { messages: [...chat,{role:"user", content:values.message}] };
         dispatch(setChat({role:"user", content:values.message}));
 
-        axios.post('http://localhost:3000/api/generate', payload)
+        axios.post(`${import.meta.env.VITE_SERVER}/generate`, payload)
         .then((res)=>{
             dispatch(setChat({role:"assistant", content:res.data.result}));
             }).catch((err)=>{
