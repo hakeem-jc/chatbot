@@ -5,6 +5,7 @@
 .app__messages {
   margin-bottom: 3rem;
   height: 70vh;
+  height: 70svh;
   overflow-y: scroll;
 }
 
@@ -36,6 +37,7 @@
   .app__messages {
     margin-bottom: 3rem;
     height: 75vh;
+    height: 75svh;
     overflow-y: scroll;
   }
 }
@@ -44,6 +46,7 @@
   .app__messages {
     margin-bottom: 3rem;
     height: 70vh;
+    height: 70svh;
     overflow-y: scroll;
   }
 }
@@ -56,6 +59,7 @@
   .app__messages {
     margin-bottom: 3rem;
     height: 62vh;
+    height: 62svh;
     overflow-y: scroll;
   }
 
@@ -67,12 +71,14 @@
 @media only screen and (min-width: 800px) {
   .app__messages {
     height: 68vh;
+    height: 68svh;
   }
 }
 
 @media only screen and (min-width: 900px) {
   .app__messages {
     height: 72vh;
+    height: 72svh;
   }
 }
 
@@ -89,11 +95,13 @@
 @media only screen and (min-width: 1280px) {
   .app__messages {
     height: 72vh;
+    height: 72svh;
   }
 }
 
 @media only screen and (min-width: 1300px) {
   .app__messages {
     height: 68vh;
+    height: 68svh;
   }
 }
