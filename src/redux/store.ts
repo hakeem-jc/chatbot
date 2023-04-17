@@ -1,8 +1,10 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { chat } from './chatSlice';
+import { is_open } from './modalSlice';
 
 const rootReducer = combineReducers({
-    chat
+    chat,
+    is_open
 })
 
 

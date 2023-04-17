@@ -6,6 +6,7 @@ import './TextField.css';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { setChat } from '../../redux/chatSlice';
 import axios from 'axios';
+import { setIsOpen } from '../../redux/modalSlice';
 
 const TextField:FC = () => {
     const dispatch = useAppDispatch();
@@ -20,6 +21,7 @@ const TextField:FC = () => {
             dispatch(setChat({role:"assistant", content:res.data.result}));
             }).catch((err)=>{
                 console.error(err);
+                dispatch(setIsOpen(true));
             });
         }
 
